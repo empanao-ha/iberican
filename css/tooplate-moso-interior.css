@@ -68,6 +68,25 @@ font-size: var(--text-7xl); /* 4.5rem (72px) */
 line-height: var(--text-7xl--line-height); /* 1 */	
 }
 
+.btn {
+    background-color: #F04E30; /* Color rojo anaranjado */
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px; /* Hace el botón ovalado */
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #D8432A; /* Un tono más oscuro al pasar el mouse */
+}
+
 h2,
 h3,
 h4,

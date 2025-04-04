@@ -11,46 +11,66 @@
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap" rel="stylesheet">
-
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
         <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="css/owl.carousel.min.css" rel="stylesheet">
-
-        <link href="css/tooplate-moso-interior.css" rel="stylesheet">
+        <link href="css/tooplate-moso-interior.css" rel="stylesheet"> 
+        
         <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+         /* Primera capa */
+         .core-header-wrap {
+            
+            background-color: #faba01;
+            color: white;
+            text-align: center;
+            padding: 0px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+        }
 
-        .capaCarousel {
+        /* .capaCarousel {
             width: 100%;
             height: 300px;
             background-size: cover;
             background-position: center;
             animation: cambiarFondo 10s infinite;
+        }*/
+
+        .capaPanoramica {
+            position: relative;
+            height: 500px;
+            background-image: url("images/panoramica.png");            
         }
 
+        /* Clase que oculta la primera capa */
+        .hide-header {
+            opacity: 0;
+            pointer-events: none;  /*Desactiva cualquier interacción con la capa */
+        }
+/*
         @keyframes cambiarFondo {
             0%, 45% { background-image: url('images/slideshow/interior-wall-mockup-with-sofa-cabinet-living-room-with-empty-white-wall-background-3d-rendering.jpg'); }
             50%, 100% { background-image: url('images/slideshow/white-wall-living-room-have-sofa-decoration-3d-rendering.jpg'); }
-        }
+        }*/
         </style>
         
     </head>
     
     <body>
 
-        <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+        <nav class="navbar navbar-expand-lg shadow-lg core-header-wrap" style="position: fixed; top: 0;" id="header">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Iberican Airlines</a>
+                <a class="navbar-brand" style="color:#ffffff;" href="index.html"><img src="images/logo.png" height="60px;">&nbsp;Iberican Airlines</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -89,15 +109,40 @@
         </nav>
 
         <main>
-        <div class="capaCarousel">
-                    <div class="row" style="padding-top:120px">
+        <div class="capaPanoramica" id="capaPanoramica">
+            <br>
+            <!--<form class="custom-form hero-form" action="#" method="get" role="form" style="height:100px;">-->
+                <div class="row custom-form hero-form" style="margin: 0 auto;margin-top:300px;width:80%;">
+                    <div class="col-lg-5 col-md-6 col-12" >
+                        <div class="input-group align-items-center" >
+                            <label for="last-name">Class</label>
 
-                       
-                                <a href="#" class="btn">Book Now</a>
-                   
+                            <select name="price-range" class="form-select form-control" id="price-range" aria-label="Default select example">
+                                <option value="500" selected>Turista/Economy</option>
+                                <option value="1000">Premium Economy</option>
+                                <option value="3000">Bussines Class</option>
+                                <option value="5000">First Class</option>
+                
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <button type="submit" class="form-control">Search</button>
                     </div>
                 </div>
+            <!--</form> -->
+        </div>
+        <!--
+        <div class="capaCarousel">
+            <div class="row" style="padding-top:120px; width:200px;margin: 0 auto;">
+
+                
+                        <a href="#" class="btn">Book Now</a>
+            
+
+            </div>
+        </div>-->
             <section class="hero-section hero-slide d-flex justify-content-center align-items-center" id="section_1">
                 <div class="container">
                     <div class="row">
@@ -129,42 +174,13 @@
 
                             <center><h4 class="text-muted mb-3">A member of the Aether Alliance</h4></center>
                             <center><h5 class="text-muted mb-3">BEST CHOICE FOR PRICE AWARD 2025.</h5></center>
-                            <form class="custom-form hero-form" action="#" method="get" role="form">
-                                    <div class="row">
-                                       <!-- <div class="col-lg-5 col-md-6 col-12">
-                                            <div class="input-group align-items-center">
-                                                <label for="product-name"></label>
-
-                                                <input type="text" name="product-name" id="product-name" class="form-control" placeholder="Bathroom, Living Room..." required>
-                                            </div>
-                                        </div>-->
-
-                                        <div class="col-lg-5 col-md-6 col-12">
-                                            <div class="input-group align-items-center">
-                                                <label for="last-name">Class</label>
-
-                                                <select name="price-range" class="form-select form-control" id="price-range" aria-label="Default select example">
-                                                    <option value="500" selected>Turista/Economy</option>
-                                                    <option value="1000">Premium Economy</option>
-                                                    <option value="3000">Bussines Class</option>
-                                                    <option value="5000">First Class</option>
-                                    
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-2 col-md-6 col-12">
-                                            <button type="submit" class="form-control">Search</button>
-                                        </div>
-                                    </div>
-                                </form>
                         </div>
 
-                        <div class="col-lg-3 col-md-5 col-5 mx-lg-auto">
+                        <div class="col-lg-3 col-md-5 col-5 mx-lg-auto" style="display: none;">
                             <img src="images/sharing-design-ideas-with-family.jpg" class="about-image about-image-small img-fluid" alt="">
                         </div>
 
-                        <div class="col-lg-4 col-md-7 col-7">
+                        <div class="col-lg-4 col-md-7 col-7" style="display: none;">
                             <img src="images/living-room-interior-wall-mockup-warm-tones-with-leather-sofa-which-is-kitchen-3d-rendering.jpg" class="about-image img-fluid" alt="">
                         </div>
 
@@ -178,7 +194,7 @@
           
 
 
-            <section class="shop-section section-padding" id="section_3">
+            <section class="shop-section section-padding" id="section_3" style="display: none;">
                 <div class="container">
                     <div class="row">
 
@@ -381,7 +397,7 @@
             </section>
 
 
-            <section class="reviews-section section-padding pb-0" id="section_4">
+            <section class="reviews-section section-padding pb-0" id="section_4" style="display: none;">
                 <div class="container">
                     <div class="row">
 
@@ -691,6 +707,8 @@
        
         <!--<script src="js/owl.carousel.min.js"></script>-->
         <script src="js/custom.js"></script>
+
+        
 
     </body>
 </html>

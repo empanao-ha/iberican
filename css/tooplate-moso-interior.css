@@ -375,6 +375,10 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.navbar-brand-sans {
+	font-family: 'Open Sans';
+}
+
 .navbar-brand,
 .navbar-brand:hover {
   color: var(--primary-color);

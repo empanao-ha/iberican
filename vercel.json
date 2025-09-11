@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/careers",
-      "destination": "/careers.html"
+      "source": "/careers.html",
+      "destination": "/careers"
     }
   ]
 }
